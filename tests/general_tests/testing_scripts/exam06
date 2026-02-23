@@ -1,0 +1,19 @@
+#!/bin/csh
+#
+# Test for the first iteration energy of an ionic liquid with a
+# manually truncated version of the cc-pVQZ basis set
+#
+# The reference value is the energy given by GAMESS on CPU
+#
+set E0=-7263.9634936369
+# Tolerance set to 10**(-7) - equal to a relative
+# error magnitude of 1.38E-11
+set tolE=0.0000001
+
+set E=`grep '1  0  0 ' $1 | awk '{print $4}'`
+set ierr=0
+set Eerr=`$check_tol $E $E0 $tolE`
+if($status != 0) set ierr=1
+set Erelerr=`echo $Eerr $E0 10 | awk '{printf "%.1e",$1/$2}'`
+echo -n "Energy error=$Eerr Relative energy error=$Erelerr"
+exit $ierr

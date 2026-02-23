@@ -1,0 +1,15 @@
+#!/bin/csh
+#
+# Script to test if the difference between two provided
+# numbers is below a provided threshold
+#
+# Argument 1 = Number 1
+# Argument 2 = Number 2
+# Argument 3 = tolerance
+#
+# Compute the difference using awk. Make sure that the difference is always positive.
+set diff=`echo $1 $2 | awk '{ if($1>$2) printf "%.1e",$1-$2 ; else printf "%.1e",$2-$1 }'`
+echo $diff
+# Exit successfully (0) if the differenece is below the tolerance.
+# Otherwise, exit with an abnormal result
+exit `echo $diff $3 | awk '{ if($1>$2) print 1 ; else print 0 }'`

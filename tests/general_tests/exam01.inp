@@ -1,0 +1,17 @@
+! Exam 01:
+! One water molecule far from home with the cc-pVTZ basis set
+! We are only interested in the first iteration energy to test
+! the correctness of the two-electron integrals
+!
+ $CONTRL SCFTYP=RHF RUNTYP=ENERGY nprint=-5 $END
+ $CONTRL MAXIT=1 MULT=1 ISPHER=1 $END
+ $SYSTEM mwords=500 memddi=500 $END
+ $BASIS GBASIS=CCT $END
+ $SCF DIRSCF=.TRUE. $END
+ $DATA
+w16
+C1
+OXYGEN      8.0    105.255796324        96.159949079       104.882091006
+HYDROGEN    1.0    104.749016029        96.962064675       104.676705353
+HYDROGEN    1.0    105.756143637        96.356890677       105.663331882
+ $END

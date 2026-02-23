@@ -1,0 +1,19 @@
+#!/bin/csh
+#
+# Test for the first iteration energies of two water molecules with the
+# cc-pVTZ basis set
+#
+# The reference value is the energy given by GAMESS on CPU
+#
+set E0=-151.4636180849
+# Tolerance is set to zero since for small systems we should see
+# exact agreement between GPU and CPU
+set tolE=0.0000000000
+
+set E=`grep '1  0  0 ' $1 | awk '{print $4}'`
+set ierr=0
+set Eerr=`$check_tol $E $E0 $tolE`
+if($status != 0) set ierr=1
+set Erelerr=`echo $Eerr $E0 10 | awk '{printf "%.1e",$1/$2}'`
+echo -n "Energy error=$Eerr Relative energy error=$Erelerr"
+exit $ierr

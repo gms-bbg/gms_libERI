@@ -1,0 +1,26 @@
+# src/rhf/rot_axis/CMakeLists.txt — SPD integral kernels
+
+target_sources(
+  ${main_lib}
+  PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/rot_axis_kernels.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0000.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0001.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0002.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0011.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0012.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0022.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0101.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0102.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0111.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0112.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0122.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int0202.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int1102.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int1111.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int2111_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int2120_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int2121_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int2211_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int2220_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int2221_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int2222_rysgen.F90)

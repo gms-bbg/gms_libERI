@@ -1,0 +1,439 @@
+versions pytest-6.2.4, py-1.10.0, python-3.8.12.final.0
+cwd=/autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests
+args=('--debug', 'test_plugin.py')
+
+  pytest_cmdline_main [hook]
+      config: <_pytest.config.Config object at 0x7fff872c7430>
+    pytest_plugin_registered [hook]
+        plugin: <Session tests exitstatus='<UNSET>' testsfailed=0 testscollected=0>
+        manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+    finish pytest_plugin_registered --> [] [hook]
+    pytest_configure [hook]
+        config: <_pytest.config.Config object at 0x7fff872c7430>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x7fff8697ba60>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x7fff8697b970>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: faulthandler [assertion]
+      pytest_configure [hook]
+          config: <_pytest.config.Config object at 0x7fff872c7430>
+      finish pytest_configure --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.faulthandler.FaultHandlerHooks object at 0x7fff8706f880>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+    early skip of rewriting module: pdb [assertion]
+    early skip of rewriting module: cmd [assertion]
+    early skip of rewriting module: code [assertion]
+    early skip of rewriting module: codeop [assertion]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x7fff872c7430>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/mark/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/main.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/runner.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/fixtures.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/helpconfig.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/python.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/terminal.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/debugging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/unittest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/capture.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/skipping.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/tmpdir.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/monkeypatch.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/recwarn.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/pastebin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.nose' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/nose.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/assertion/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/junitxml.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/doctest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/cacheprovider.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.freeze_support' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/freeze_support.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/setuponly.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/setupplan.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/stepwise.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/warnings.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/logging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/reports.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unraisableexception' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/unraisableexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.threadexception' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/threadexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/faulthandler.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'anyio.pytest_plugin' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/anyio/pytest_plugin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=6 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=7 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=8 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=9 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=4 _state='started' tmpfile=<_io.TextIOWrapper name='/dev/null' mode='r' encoding='UTF-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'conftest' from '/autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests/conftest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x7fff8697ba60>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x7fff8697b970>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.faulthandler.FaultHandlerHooks object at 0x7fff8706f880>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x7fff8690a070>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x7fff86850e20>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+    finish pytest_configure --> [] [hook]
+    pytest_sessionstart [hook]
+        session: <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.config.Config object at 0x7fff872c7430>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.mark' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/mark/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.main' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/main.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.runner' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/runner.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.fixtures' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/fixtures.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.helpconfig' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/helpconfig.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.python' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/python.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.terminal' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/terminal.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.debugging' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/debugging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unittest' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/unittest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.capture' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/capture.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.skipping' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/skipping.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.tmpdir' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/tmpdir.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.monkeypatch' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/monkeypatch.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.recwarn' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/recwarn.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.pastebin' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/pastebin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.nose' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/nose.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.assertion' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/assertion/__init__.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.junitxml' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/junitxml.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.doctest' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/doctest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.cacheprovider' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/cacheprovider.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.freeze_support' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/freeze_support.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setuponly' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/setuponly.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.setupplan' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/setupplan.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.stepwise' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/stepwise.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.warnings' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/warnings.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.logging' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/logging.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.reports' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/reports.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.unraisableexception' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/unraisableexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.threadexception' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/threadexception.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module '_pytest.faulthandler' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/_pytest/faulthandler.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'anyio.pytest_plugin' from '/sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/anyio/pytest_plugin.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=6 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=7 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=8 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=9 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=4 _state='started' tmpfile=<_io.TextIOWrapper name='/dev/null' mode='r' encoding='UTF-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <module 'conftest' from '/autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests/conftest.py'>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x7fff8697ba60>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x7fff8697b970>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.faulthandler.FaultHandlerHooks object at 0x7fff8706f880>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.terminal.TerminalReporter object at 0x7fff8690a070>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.logging.LoggingPlugin object at 0x7fff86850e20>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_plugin_registered [hook]
+          plugin: <_pytest.fixtures.FixtureManager object at 0x7fff8697b9d0>
+          manager: <_pytest.config.PytestPluginManager object at 0x7fff8805d250>
+      finish pytest_plugin_registered --> [] [hook]
+      pytest_report_header [hook]
+          config: <_pytest.config.Config object at 0x7fff872c7430>
+          startdir: /autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests
+      early skip of rewriting module: email.parser [assertion]
+      early skip of rewriting module: email.feedparser [assertion]
+      early skip of rewriting module: email.errors [assertion]
+      early skip of rewriting module: email._policybase [assertion]
+      early skip of rewriting module: email.header [assertion]
+      early skip of rewriting module: email.quoprimime [assertion]
+      early skip of rewriting module: email.base64mime [assertion]
+      early skip of rewriting module: email.charset [assertion]
+      early skip of rewriting module: email.encoders [assertion]
+      early skip of rewriting module: quopri [assertion]
+      early skip of rewriting module: email.utils [assertion]
+      early skip of rewriting module: email._parseaddr [assertion]
+      early skip of rewriting module: calendar [assertion]
+      early skip of rewriting module: email.message [assertion]
+      early skip of rewriting module: uu [assertion]
+      early skip of rewriting module: email._encoded_words [assertion]
+      early skip of rewriting module: email.iterators [assertion]
+      finish pytest_report_header --> [['rootdir: /autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests', 'plugins: anyio-3.5.0'], ['using: pytest-6.2.4 pylib-1.10.0', 'setuptools registered plugins:', '  anyio-3.5.0 at /sw/ascent/python/3.8/anaconda-base/lib/python3.8/site-packages/anyio/pytest_plugin.py']] [hook]
+    finish pytest_sessionstart --> [] [hook]
+    pytest_collection [hook]
+        session: <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+    perform_collect <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0> ['test_plugin.py'] [collection]
+        pytest_collectstart [hook]
+            collector: <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        finish pytest_collectstart --> [] [hook]
+        pytest_make_collect_report [hook]
+            collector: <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+        processing argument (local('/autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests/test_plugin.py'), []) [collection]
+            pytest_collect_file [hook]
+                path: /autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests/test_plugin.py
+                parent: <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              pytest_pycollect_makemodule [hook]
+                  path: /autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests/test_plugin.py
+                  parent: <Session tests exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
+              finish pytest_pycollect_makemodule --> <Module test_plugin.py> [hook]
+            finish pytest_collect_file --> [<Module test_plugin.py>] [hook]
+          matchnodes [<Module test_plugin.py>] [] [collection]
+            matchnodes finished ->  1 nodes [collection]
+        finish pytest_make_collect_report --> <CollectReport '' lenresult=1 outcome='passed'> [hook]
+        pytest_collectreport [hook]
+            report: <CollectReport '' lenresult=1 outcome='passed'>
+        finish pytest_collectreport --> [] [hook]
+    genitems <Module test_plugin.py> [collection]
+      pytest_collectstart [hook]
+          collector: <Module test_plugin.py>
+      finish pytest_collectstart --> [] [hook]
+      pytest_make_collect_report [hook]
+          collector: <Module test_plugin.py>
+      find_module called for: test_plugin [assertion]
+      matched test file (was specified on cmdline): '/autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests/test_plugin.py' [assertion]
+      found cached rewritten pyc for /autofs/nccsopen-svm1_home/malkan98/libERI-repo/tests/test_plugin.py [assertion]
+      early skip of rewriting module: mdi [assertion]
+      early skip of rewriting module: mdi.mdi [assertion]
+      early skip of rewriting module: ctypes [assertion]
+      early skip of rewriting module: _ctypes [assertion]
+      early skip of rewriting module: ctypes._endian [assertion]
+      early skip of rewriting module: numpy [assertion]
+      early skip of rewriting module: numpy._globals [assertion]
+      early skip of rewriting module: numpy.__config__ [assertion]
+      early skip of rewriting module: numpy.version [assertion]
+      early skip of rewriting module: numpy._distributor_init [assertion]
+      early skip of rewriting module: numpy.core [assertion]
+      early skip of rewriting module: numpy.core.multiarray [assertion]
+      early skip of rewriting module: numpy.core.overrides [assertion]
+      early skip of rewriting module: numpy.core._multiarray_umath [assertion]
+      early skip of rewriting module: numpy.compat [assertion]
+      early skip of rewriting module: numpy.compat._inspect [assertion]
+      early skip of rewriting module: numpy.compat.py3k [assertion]
+      early skip of rewriting module: pickle5 [assertion]

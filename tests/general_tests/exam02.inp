@@ -1,0 +1,20 @@
+! Exam 02:
+! Two water molecules with the cc-pVTZ basis set
+! We are only interested in the first iteration energy to test
+! the correctness of the two-electron integrals
+!
+ $CONTRL SCFTYP=RHF RUNTYP=ENERGY MAXIT=1 MULT=1 ISPHER=1 $END
+ $CONTRL NPRINT=-5 $END
+ $SYSTEM TIMLIM=525600 MWORDS=500 MEMDDI=100 PARALL=.TRUE. $END
+ $BASIS GBASIS=CCT $END
+ $SCF DIRSCF=.TRUE. $END
+ $DATA
+Title
+C1
+O     8.0     1.07719    -1.29760     1.03360
+H     1.0     1.66508    -1.35688     1.77409
+H     1.0     0.21818    -1.14749     1.40377
+O     8.0     0.00000     0.00000    -0.06222
+H     1.0     0.75407    -0.00000     0.51121
+H     1.0    -0.75407     0.00000     0.51121
+ $END

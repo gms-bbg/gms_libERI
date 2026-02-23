@@ -1,0 +1,1158 @@
+source /home/delangel/2eInts/gamess_MDI/install.info
+setenv GMS_VERSION 00
+setenv GMS_PATH /home/delangel/2eInts/gamess_MDI
+setenv GMS_BUILD_DIR /home/delangel/2eInts/gamess_MDI
+setenv GMS_TARGET linux64
+setenv GMS_HPC_SYSTEM_TARGET generic
+setenv GMS_FORTRAN nvfortran
+setenv GMS_L64_OPT default
+setenv GMS_LIN_FLAGS
+setenv GMS_MATHLIB nvblas
+setenv GMS_MATHLIB_PATH /home/delangel/Linux_x86_64/22.5/compilers/lib
+setenv GMS_THREADED_BLAS false
+setenv GMS_LAPACK_LINK_LINE
+setenv GMS_DDI_COMM mpi
+setenv GMS_MPI_LIB openmpi
+setenv GMS_MPI_PATH /home/delangel/Linux_x86_64/22.5/comm_libs/openmpi/openmpi-3.1.5
+setenv GMS_MSUAUTO false
+setenv GMS_HPCCHEM false
+setenv GMS_HPCCHEM_PATH
+setenv GMS_HPCCHEM_USE_DATA_SERVERS false
+setenv GMS_LIBCCHEM false
+setenv GMS_LIBERI true
+setenv GMS_LIBERI_PATH /home/delangel/2eInts/gamess_MDI/gamess-libERI
+setenv GMS_PHI none
+setenv GMS_SHMTYPE sysv
+setenv GMS_OPENMP true
+setenv GMS_OPENMP_OFFLOAD false
+setenv GMS_LIBXC false
+setenv GMS_MDI true
+setenv GMS_VM2 false
+setenv TINKER false
+setenv VB2000 false
+setenv XMVB false
+setenv NEO false
+setenv NBO false
+setenv RISM false
+setenv GMS_FPE_FLAGS -Ktrap=fp
+if ( ! 1 ) setenv OMP_NUM_THREADS 8
+if ( ! 0 ) setenv OMP_STACKSIZE 1G
+setenv OMP_STACKSIZE 1G
+unset echo
+No scheduler so we must be running locally on Big-Chungus
+Input file supplied : Si_thn_2_631G3df3pd.inp
+----- GAMESS execution script 'rungms-dev' -----
+This job is running on host Big-Chungus
+under operating system Linux at Thu Dec 19 10:14:47 CST 2024 with mpi communication mode
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem      1K-blocks       Used Available Use% Mounted on
+/dev/sda2      1844319788 1678473252  72086436  96% /
+GAMESS temporary binary files will be written to /home/delangel/2eInts/gamess_MDI/scratch
+GAMESS supplementary output files will be written to /home/delangel/restart
+removed '/home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.nodes.mpd'
+Copying input file Si_thn_2_631G3df3pd.inp to your run's scratch directory...
+cp Si_thn_2_631G3df3pd.inp /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F05
+setenv NO_STOP_MESSAGE 1
+setenv AUXDATA /home/delangel/2eInts/gamess_MDI/auxdata
+setenv EXTBAS /dev/null
+setenv NUCBAS /home/delangel/2eInts/gamess_MDI/Si_thn_2_631G3df3pd.nucbas
+setenv EXTCAB /home/delangel/2eInts/gamess_MDI/auxdata/AUXBAS/auxdef21
+setenv POSBAS /home/delangel/2eInts/gamess_MDI/Si_thn_2_631G3df3pd.posbas
+setenv DFTBPAR /home/delangel/2eInts/gamess_MDI/auxdata/DFTB
+setenv ERICFMT /home/delangel/2eInts/gamess_MDI/auxdata/ericfmt.dat
+setenv MCPPATH /home/delangel/2eInts/gamess_MDI/auxdata/MCP
+setenv BASPATH /home/delangel/2eInts/gamess_MDI/auxdata/BASES
+setenv QUANPOL /home/delangel/2eInts/gamess_MDI/auxdata/QUANPOL
+setenv MAKEFP /home/delangel/restart/Si_thn_2_631G3df3pd.efp
+setenv GAMMA /home/delangel/restart/Si_thn_2_631G3df3pd.gamma
+setenv TRAJECT /home/delangel/restart/Si_thn_2_631G3df3pd.trj
+setenv RESTART /home/delangel/restart/Si_thn_2_631G3df3pd.rst
+setenv QMWAVE /home/delangel/restart/Si_thn_2_631G3df3pd.qmw
+setenv MDDIP /home/delangel/restart/Si_thn_2_631G3df3pd.dip
+setenv OPTHES1 /home/delangel/restart/Si_thn_2_631G3df3pd.hs1
+setenv OPTHES2 /home/delangel/restart/Si_thn_2_631G3df3pd.hs2
+setenv FCIDUMP /home/delangel/restart/Si_thn_2_631G3df3pd.FCIDUMP
+setenv XYZ /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.xyz
+setenv IRCDATA /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F04
+setenv INPUT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F05
+setenv PUNCH /home/delangel/restart/Si_thn_2_631G3df3pd.dat
+setenv NAMDRST /home/delangel/restart/Si_thn_2_631G3df3pd.namdrst
+setenv AOINTS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F08
+setenv MOINTS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F09
+setenv DICTNRY /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F10
+setenv DRTFILE /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F11
+setenv CIVECTR /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F12
+setenv CASINTS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F13
+setenv CIINTS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F14
+setenv WORK15 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F15
+setenv WORK16 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F16
+setenv CSFSAVE /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F17
+setenv FOCKDER /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F18
+setenv WORK19 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F19
+setenv DASORT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F20
+setenv DIABDAT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F21
+setenv DFTINTS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F21
+setenv DFTGRID /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F22
+setenv JKFILE /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F23
+setenv ORDINT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F24
+setenv EFPIND /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F25
+setenv PCMDATA /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F26
+setenv PCMINTS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F27
+setenv SVPWRK1 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F26
+setenv SVPWRK2 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F27
+setenv COSCAV /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F26
+setenv COSDATA /home/delangel/restart/Si_thn_2_631G3df3pd.cosmo
+setenv COSPOT /home/delangel/restart/Si_thn_2_631G3df3pd.pot
+setenv MLTPL /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F28
+setenv MLTPLT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F29
+setenv DAFL30 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F30
+setenv SOINTX /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F31
+setenv SOINTY /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F32
+setenv SOINTZ /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F33
+setenv SORESC /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F34
+setenv RISM01 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F26R
+setenv RISM02 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F27R
+setenv QOPWRF /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.wrf
+setenv GCILIST /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F37
+setenv HESSIAN /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F38
+setenv QMMMTEI /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F39
+setenv SOCCDAT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F40
+setenv AABB41 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F41
+setenv BBAA42 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F42
+setenv BBBB43 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F43
+setenv REMD /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F44
+setenv UNV /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F45
+setenv UNPV /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F46
+setenv MCQD50 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F50
+setenv MCQD51 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F51
+setenv MCQD52 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F52
+setenv MCQD53 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F53
+setenv MCQD54 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F54
+setenv MCQD55 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F55
+setenv MCQD56 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F56
+setenv MCQD57 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F57
+setenv MCQD58 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F58
+setenv MCQD59 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F59
+setenv MCQD60 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F60
+setenv MCQD61 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F61
+setenv MCQD62 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F62
+setenv MCQD63 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F63
+setenv MCQD64 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F64
+setenv NMRINT1 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F61
+setenv NMRINT2 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F62
+setenv NMRINT3 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F63
+setenv NMRINT4 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F64
+setenv NMRINT5 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F65
+setenv NMRINT6 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F66
+setenv DCPHFH2 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F67
+setenv DCPHF21 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F68
+setenv ELNUINT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F67
+setenv NUNUINT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F68
+setenv GVVPT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F69
+setenv NUMOIN /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F69
+setenv NUMOCAS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F70
+setenv NUELMO /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F71
+setenv NUELCAS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F72
+setenv EPOVRLP /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F73
+setenv RIVMAT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F51
+setenv RIT2A /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F52
+setenv RIT3A /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F53
+setenv RIT2B /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F54
+setenv RIT3B /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F55
+setenv KI /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F47
+setenv BI /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F48
+setenv PRMERI /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F49
+setenv TRSERI /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F50
+setenv PVP /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F51
+setenv TPVPI /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F52
+setenv TPVPJ /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F53
+setenv PPVPP /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F54
+setenv TPPVPP /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F55
+setenv DEN2P1 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F70
+setenv DEN2P2 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F71
+setenv DEN2P3 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F72
+setenv DEN2P4 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F73
+setenv DEN2NM /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F74
+setenv DEN2OPT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F75
+setenv GMCREF /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F70
+setenv GMCO2R /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F71
+setenv GMCROC /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F72
+setenv GMCOOC /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F73
+setenv GMCCC0 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F74
+setenv GMCHMA /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F75
+setenv GMCEI1 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F76
+setenv GMCEI2 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F77
+setenv GMCEOB /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F78
+setenv GMCEDT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F79
+setenv GMCERF /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F80
+setenv GMCHCR /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F81
+setenv GMCGJK /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F82
+setenv GMCGAI /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F83
+setenv GMCGEO /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F84
+setenv GMCTE1 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F85
+setenv GMCTE2 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F86
+setenv GMCHEF /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F87
+setenv GMCMOL /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F88
+setenv GMCMOS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F89
+setenv GMCWGT /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F90
+setenv GMCRM2 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F91
+setenv GMCRM1 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F92
+setenv GMCR00 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F93
+setenv GMCRP1 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F94
+setenv GMCRP2 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F95
+setenv GMCVEF /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F96
+setenv GMCDIN /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F97
+setenv GMC2SZ /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F98
+setenv GMCCCS /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F99
+unset echo
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.casino': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.dmn': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.cim': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.cosmo': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.pot': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.gamma': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.efp': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.dip': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.hs1': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.hs2': No such file or directory
+rm /home/delangel/restart/Si_thn_2_631G3df3pd.dat
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.qmw': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.rst': No such file or directory
+rm: cannot remove '/home/delangel/restart/Si_thn_2_631G3df3pd.trj': No such file or directory
+-----debug----
+HOSTFILE /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.nodes.mpd contains
+Big-Chungus
+--------------
+-----debug----
+PROCFILE /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.processes.mpd contains
+Big-Chungus slots=2 max_slots=2
+--------------
+setenv OMPI_MCA_mpi_yield_when_idle 1
+unset echo
+-----debug----
+the execution path is
+/home/delangel/Linux_x86_64/22.5/comm_libs/openmpi/openmpi-3.1.5/bin /usr/local/cuda /home/delangel/Linux_x86_64/22.5/comm_libs/mpi/bin /home/delangel/Linux_x86_64/22.5/compilers/bin /usr/local/cuda/bin /usr/local/cmake/3.17.3/bin /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games /snap/bin
+
+the library path is
+/home/delangel/Linux_x86_64/22.5/comm_libs/openmpi/openmpi-3.1.5/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib::/home/delangel/Linux_x86_64/22.5/compilers/man:/home/delangel/Linux_x86_64/22.5/comm_libs/mpi/man:/home/delangel/Linux_x86_64/22.5/compilers/lib:/usr/local/cuda/lib64:
+
+The dynamically linked libraries for this binary are
+/home/delangel/2eInts/gamess_MDI/gamess.00.x :
+/home/delangel/2eInts/gamess_MDI/gamess.00.x :
+	linux-vdso.so.1 (0x00007ffff5d60000)
+	libblas_ilp64.so.0 => /home/delangel/Linux_x86_64/22.5/compilers/lib/libblas_ilp64.so.0 (0x00007fa0f3400000)
+	liblapack_ilp64.so.0 => /home/delangel/Linux_x86_64/22.5/compilers/lib/liblapack_ilp64.so.0 (0x00007fa0f2600000)
+	libmpi.so.40 => /home/delangel/Linux_x86_64/22.5/comm_libs/openmpi/openmpi-3.1.5/lib/libmpi.so.40 (0x00007fa0f2000000)
+	libopen-pal.so.40 => /home/delangel/Linux_x86_64/22.5/comm_libs/openmpi/openmpi-3.1.5/lib/libopen-pal.so.40 (0x00007fa0f1a00000)
+	libopen-rte.so.40 => /home/delangel/Linux_x86_64/22.5/comm_libs/openmpi/openmpi-3.1.5/lib/libopen-rte.so.40 (0x00007fa0f1600000)
+	libacchost.so => /home/delangel/Linux_x86_64/22.5/compilers/lib/libacchost.so (0x00007fa0f1200000)
+	libaccdevaux.so => /home/delangel/Linux_x86_64/22.5/compilers/lib/libaccdevaux.so (0x00007fa0f0e00000)
+	libaccdevice.so => /home/delangel/Linux_x86_64/22.5/compilers/lib/libaccdevice.so (0x00007fa0f0a00000)
+	libcudadevice.so => /home/delangel/Linux_x86_64/22.5/compilers/lib/libcudadevice.so (0x00007fa0f0600000)
+	libnvf.so => /home/delangel/Linux_x86_64/22.5/compilers/lib/libnvf.so (0x00007fa0efe00000)
+	libnvomp.so => /home/delangel/Linux_x86_64/22.5/compilers/lib/libnvomp.so (0x00007fa0ef000000)
+	libatomic.so.1 => /usr/lib/x86_64-linux-gnu/libatomic.so.1 (0x00007fa0f4c8d000)
+	libnvcpumath.so => /home/delangel/Linux_x86_64/22.5/compilers/lib/libnvcpumath.so (0x00007fa0eea00000)
+	libnvc.so => /home/delangel/Linux_x86_64/22.5/compilers/lib/libnvc.so (0x00007fa0ee600000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fa0ee3d7000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007fa0f4c6d000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fa0f4b84000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007fa0f4b7f000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007fa0f4b7a000)
+	librdmacm.so.1 => /usr/lib/x86_64-linux-gnu/librdmacm.so.1 (0x00007fa0f4b59000)
+	libibverbs.so.1 => /usr/lib/x86_64-linux-gnu/libibverbs.so.1 (0x00007fa0f4b36000)
+	libnuma.so.1 => /home/delangel/Linux_x86_64/22.5/comm_libs/openmpi/openmpi-3.1.5/lib/libnuma.so.1 (0x00007fa0ee000000)
+	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007fa0f4b31000)
+	libutil.so.1 => /lib/x86_64-linux-gnu/libutil.so.1 (0x00007fa0f4b2c000)
+	libz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007fa0f4b10000)
+	libnvhpcatm.so => /home/delangel/Linux_x86_64/22.5/comm_libs/openmpi/openmpi-3.1.5/lib/../../../../compilers/lib/libnvhpcatm.so (0x00007fa0edc00000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fa0f4cc1000)
+	libnl-3.so.200 => /lib/x86_64-linux-gnu/libnl-3.so.200 (0x00007fa0f4aeb000)
+	libnl-route-3.so.200 => /usr/lib/x86_64-linux-gnu/libnl-route-3.so.200 (0x00007fa0f337d000)
+--------------
+MPI kickoff will run GAMESS on 1 cores in 1 nodes.
+The binary to be executed is /home/delangel/2eInts/gamess_MDI/gamess.00.x
+MPI will run 1 compute processes and 1 data servers,
+    placing 1 of each process type onto each node.
+The scratch disk space on each node is /home/delangel/2eInts/gamess_MDI/scratch, with free space
+Filesystem      1K-blocks       Used Available Use% Mounted on
+/dev/sda2      1844319788 1678470416  72089272  96% /
+if ( true == true ) then
+if ( 1 == 1 ) then
+orterun --mca orte_base_help_aggregate 0 --mca orte_tmpdir_base /tmp --mca btl vader,self,tcp -np 2 --bind-to socket --report-bindings /home/delangel/2eInts/gamess_MDI/gamess.00.x
+[Big-Chungus:2064794] MCW rank 0 is not bound (or bound to all available processors)
+[Big-Chungus:2064794] MCW rank 1 is not bound (or bound to all available processors)
+ Entering F77 DDI_Init
+  i am in ddi init
+  DDI_Compute_comm = 0
+ Entering F77 DDI_Init
+  i am in ddi init
+  DDI_Compute_comm = 0
+ world =  world communicator 1
+ world =  world communicator 1
+ ddi compute communicator 1867294864
+ ddi compute communicator 46445952
+calling NProc in fortran wrapper
+ env
+ true
+          *******************************************************
+          *                                                     *
+          *          GAMESS VERSION = 30 SEP 2023 (R2)          *
+          *                                                     *
+          *              doi.org/10.1063/5.0005188              *
+          *                                                     *
+          **************** 64 BIT LINUX VERSION *****************
+
+           git commit: 05a8d32b9b7355e1336635b6e69a2c059e510894
+
+
+  GAMESS HAS BEEN MADE POSSIBLE WITH IMPORTANT CONTRIBUTIONS FROM
+  THE FOLLOWING INDIVIDUALS (IN ALPHABETICAL ORDER):
+
+     IVANA ADAMOVIC, CHRISTINE AIKENS, TOMOKO AKAMA,
+     MELISA ALKAN, YURI ALEXEEV, YURIKO AOKI, POOJA ARORA,
+     TOSHIO ASADA, ANDREY ASADCHEV, KIM K. BALDRIDGE,
+     PRADIPTA BANDYOPADHYAY, TAYLOR A. BARNES, MARIA BARYSZ,
+     ROB BELL, JONATHAN BENTZ, COLLEEN BERTONI,
+     JERRY A. BOATZ, BRETT BODE, KURT BRORSEN, KURT R. BRORSEN,
+     LAIMUTIS BYTAUTAS, CALEB CARLIN, LAURA CARRINGTON,
+     GALINA CHABAN, BENOIT CHAMPAGNE, WEI CHEN, MAHITO CHIBA,
+     DAN CHIPMAN, CHEOL HO CHOI, TANNER CULPITT,
+     DIPAYAN DATTA, PAUL DAY, ALBERT DEFUSCO,
+     NUWAN DESILVA, J. EMILIANO DEUSTUA,
+     TIM DUDLEY, MICHEL DUPUIS, STEVEN T. ELBERT,
+     DMITRI FEDOROV, KATHERINE FERRERAS, MICHAEL FILATOV,
+     ALEX FINDLATER,GRAHAM FLETCHER, MARK FREITAG,
+     CHRISTIAN FRIEDL, DAVID GARMER,
+     IGOR S. GERASIMOV, KURT GLAESEMANN,
+     MARK S. GORDON, JEFFREY R. GOUR, FENG LONG GU,
+     EMILIE B. GUIDEZ, ANASTASIA GUNINA, SHARON HAMMES-SCHIFFER,
+     MASATAKE HARUTA, KIMIHIKO HIRAO, YASUHIRO IKABATA,
+     TZVETELIN IORDANOV, STEPHAN IRLE, KAZUYA ISHIMURA,
+     JOE IVANIC, FRANK JENSEN, JAN H. JENSEN, VISVALDAS KAIRYS,
+     MUNEAKI KAMIYA, MICHIO KATOUDA, NAOAKI KAWAKAMI, DAN KEMP,
+     BERNARD KIRTMAN, KAZUO KITAURA, MARIUSZ KLOBUKOWSKI,
+     MASATO KOBAYASHI, KONSTANTIN KOMAROV, PRAKASHAN KORAMBATH,
+     JACEK KORCHOWIEC, SHIRO KOSEKI, KAROL KOWALSKI,
+     JIMMY KROMANN, STANISLAW A. KUCHARSKI, HENRY KURTZ,
+     SAROM SOK LEANG, SEUNGHOON LEE, HUI LI, SHUHUA LI, WEI LI,
+     JESSE J. LUTZ, ALEKSANDR O. LYKHIN,
+     ILIAS MAGOULAS, MARCIN MAKOWSKI,
+     JOANI MATO, NIKITA MATSUNAGA, BENEDETTA MENNUCCI,
+     GRANT MERRILL, NORIYUKI MINEZAWA, VLADIMIR MIRONOV,
+     EISAKU MIYOSHI, JOHN A. MONTGOMERY JR., HIROTOSHI MORI,
+     JONATHAN MULLIN, MONIKA MUSIAL, SHIGERU NAGASE,
+     TAKESHI NAGATA, HIROMI NAKAI, TAKAHITO NAKAJIMA,
+     YUYA NAKAJIMA, HARUYUKI NAKANO, HIROYA NAKATA, SEAN NEDD,
+     HEATHER NETZLOFF, KIET A. NGUYEN, YOSHIO NISHIMOTO,
+     BOSILJKA NJEGIC, RYAN OLSON, MIKE PAK, ROBERTO PEVERATI,
+     BUU PHAM, PIOTR PIECUCH, ANNA POMOGAEVA, DAVID POOLE,
+     SPENCER PRUITT, OLIVIER QUINET, LUKE ROSKOP,
+     KLAUS RUEDENBERG, ANDREW SAND, TOSAPORN SATTASATHUCHANA,
+     NOZOMI SAWADA, MICHAEL W. SCHMIDT, PATRICK E. SCHNEIDER,
+     JUNJI SEINO, PRACHI SHARMA, JUN SHEN, JIM SHOEMAKER,
+     GEORGE SCHOENDORFF, YINAN SHU, DEJUN SI, JONATHAN SKONE,
+     LYUDMILA SLIPCHENKO, TONY SMITH, JIE SONG, MARK SPACKMAN,
+     CASPER STEINMANN, WALT STEVENS, PEIFENG SU, SHUJUN SU,
+     CHET SWALINA, CHINAMI TAKASHIMA, TETSUYA TAKETSUGU,
+     ZHEN TAO, NANDUN THELLAMUREGE, SEIKEN TOKURA,
+     JACOPO TOMASI, TSUGUKI TOUMA, TAKAO TSUNEDA, HIROAKI UMEDA,
+     JORGE LUIS GALVEZ VALLEJO, YALI WANG, SIMON WEBB,
+     AARON WEST, THERESA L. WINDUS, MARTA WLOCH,
+     PENG XU, KIYOSHI YAGI, SUSUMU YANAGISAWA, YANG YANG,
+     SOOHAENG YOO, TAKESHI YOSHIKAWA, FEDERICO ZAHARIEV,
+     TOBY ZENG
+
+  WHO ARE SUPPORTED BY THEIR INSTITUTION/UNIVERSITY/COMPANY/GROUP
+  (IN ALPHABETICAL ORDER):
+
+     EP ANALYTICS,
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX,
+     INSTITUTE FOR MOLECULAR SCIENCE, IOWA STATE UNIVERSITY,
+     JACKSON STATE UNIVERSITY, JOHANNES KEPLER UNIVERSITY LINZ,
+     KYUNGPOOK NATIONAL UNIVERSITY
+     KYUSHU UNIVERSITY, MICHIGAN STATE UNIVERSITY,
+     MIE UNIVERSITY, THE MOLECULAR SCIENCES SOFTWARE INSTITUTE,
+     MOSCOW STATE UNIVERSITY,
+     N. COPERNICUS UNIVERSITY, NAGOYA UNIVERSITY,
+     NANJING UNIVERSITY, NAT. INST. OF ADVANCED INDUSTRIAL
+     SCIENCE AND TECHNOLOGY, NATIONAL INST. OF STANDARDS AND
+     TECHNOLOGY, NESMEYANOV INSTITUTE OF ORGANOELEMENT COMPOUNDS
+     OF RUSSIAN ACADEMY OF SCIENCES, OSAKA PREFECTURE UNIVERSITY,
+     PENNSYLVANIA STATE UNIVERSITY, TOKYO INSTITUTE OF TECHNOLOGY,
+     UNIVERSITY OF AARHUS, UNIVERSITY OF ALBERTA,
+     UNIVERSITY OF CALIFORNIA AT SANTA BARBARA,
+     UNIVERSITY OF COPENHAGEN, UNIVERSITY OF IOWA,
+     UNIVERSITY OF MEMPHIS, UNIVERSITY OF MINNESOTA,
+     UNIVERSITY OF NEBRASKA, UNIVERSITY OF NEW ENGLAND,
+     UNIVERSITY OF NOTRE DAME, UNIVERSITY OF PISA,
+     UNIVERSITY OF SILESIA, UNIVERSITY OF TOKYO,
+     UNIVERSITY OF ZURICH, WASEDA UNIVERSITY,
+     YALE UNIVERSITY
+
+  GAMESS SOFTWARE MANAGEMENT TEAM FOR THIS RELEASE:
+     MARK S. GORDON (TEAM LEAD),
+     BRETT BODE (SENIOR ADVISOR),
+     GIUSEPPE BARCA,
+     COLLEEN BERTONI,
+     KRISTOPHER KEIPERT (ADVISOR),
+     SAROM S. LEANG (DEVELOPMENT LEAD),
+     BUU PHAM,
+     JACKSON HAYES (WEBSITE ADMINISTRATOR),
+     PENG XU
+
+ EXECUTION OF GAMESS BEGUN 10:14:54 19-DEC-2024
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD>!   File created by MacMolPlt 7.7
+ INPUT CARD> $CONTRL SCFTYP=RHF RUNTYP=ENERGY EXETYP=RUN $END
+ INPUT CARD> $CONTRL MAXIT=1 MULT=1 ISPHER=1 NOSYM=1 NPRINT=-5 $END
+ INPUT CARD> $SYSTEM TIMLIM=525600 MWORDS=100 MEMDDI=100 $END
+ INPUT CARD> $GUESS GUESS=HUCKEL $END
+ INPUT CARD> $SCF DIRSCF=.TRUE. $END
+ INPUT CARD> $DATA
+ INPUT CARD>Two Si-tetrahedranes w/ the 6-31G(3df,3pd) basis set
+ INPUT CARD>C1
+ INPUT CARD>Si    14.0     4.68805    -1.00216     3.93571
+ INPUT CARD>S   6
+ INPUT CARD>1     16115.9000000              0.00195948
+ INPUT CARD>2      2425.5800000              0.01492880
+ INPUT CARD>3       553.8670000              0.07284780
+ INPUT CARD>4       156.3400000              0.24613000
+ INPUT CARD>5        50.0683000              0.48591400
+ INPUT CARD>6        17.0178000              0.32500200
+ INPUT CARD>L   6
+ INPUT CARD>1       292.7180000             -0.00278094             0.00443826
+ INPUT CARD>2        69.8731000             -0.03571460             0.03266790
+ INPUT CARD>3        22.3363000             -0.11498500             0.13472100
+ INPUT CARD>4         8.1503900              0.09356340             0.32867800
+ INPUT CARD>5         3.1345800              0.60301700             0.44964000
+ INPUT CARD>6         1.2254300              0.41895900             0.26137200
+ INPUT CARD>L   3
+ INPUT CARD>1         1.7273800             -0.24463000            -0.01779510
+ INPUT CARD>2         0.5729220              0.00431572             0.25353900
+ INPUT CARD>3         0.2221920              1.09818000             0.80066900
+ INPUT CARD>L   1
+ INPUT CARD>1         0.0778369              1.00000000             1.00000000
+ INPUT CARD>D   1
+ INPUT CARD>1         1.8000                 1.000000
+ INPUT CARD>D   1
+ INPUT CARD>1         0.4500                 1.000000
+ INPUT CARD>D   1
+ INPUT CARD>1         0.1125                 1.000000
+ INPUT CARD>F   1
+ INPUT CARD>1         0.32000                1.000000
+ INPUT CARD>
+ INPUT CARD>Si    14.0     4.68805     1.31785     3.93571
+ INPUT CARD>S   6
+ INPUT CARD>1     16115.9000000              0.00195948
+ INPUT CARD>2      2425.5800000              0.01492880
+ INPUT CARD>3       553.8670000              0.07284780
+ INPUT CARD>4       156.3400000              0.24613000
+ INPUT CARD>5        50.0683000              0.48591400
+ INPUT CARD>6        17.0178000              0.32500200
+ INPUT CARD>L   6
+ INPUT CARD>1       292.7180000             -0.00278094             0.00443826
+ INPUT CARD>2        69.8731000             -0.03571460             0.03266790
+calling NProc in fortran wrapper
+    100000000 WORDS OF MEMORY AVAILABLE
+
+
+     RUN TITLE
+     ---------
+ Two Si-tetrahedranes w/ the 6-31G(3df,3pd) basis set
+
+ THE POINT GROUP OF THE MOLECULE IS C1
+ THE ORDER OF THE PRINCIPAL AXIS IS     0
+ *** WARNING! ATOM   1 SHELL    2 TYPE P HAS NORMALIZATION   1.00000102
+ *** WARNING! ATOM   1 SHELL    3 TYPE S HAS NORMALIZATION   1.00000411
+ *** WARNING! ATOM   2 SHELL   10 TYPE P HAS NORMALIZATION   1.00000102
+ *** WARNING! ATOM   2 SHELL   11 TYPE S HAS NORMALIZATION   1.00000411
+ *** WARNING! ATOM   3 SHELL   18 TYPE P HAS NORMALIZATION   1.00000102
+ *** WARNING! ATOM   3 SHELL   19 TYPE S HAS NORMALIZATION   1.00000411
+ *** WARNING! ATOM   4 SHELL   26 TYPE P HAS NORMALIZATION   1.00000102
+ *** WARNING! ATOM   4 SHELL   27 TYPE S HAS NORMALIZATION   1.00000411
+ *** WARNING! ATOM   9 SHELL   58 TYPE P HAS NORMALIZATION   1.00000102
+ *** WARNING! ATOM   9 SHELL   59 TYPE S HAS NORMALIZATION   1.00000411
+ *** WARNING! ATOM  10 SHELL   66 TYPE P HAS NORMALIZATION   1.00000102
+ *** WARNING! ATOM  10 SHELL   67 TYPE S HAS NORMALIZATION   1.00000411
+ *** WARNING! ATOM  11 SHELL   74 TYPE P HAS NORMALIZATION   1.00000102
+ *** WARNING! ATOM  11 SHELL   75 TYPE S HAS NORMALIZATION   1.00000411
+ *** WARNING! ATOM  12 SHELL   82 TYPE P HAS NORMALIZATION   1.00000102
+ *** WARNING! ATOM  12 SHELL   83 TYPE S HAS NORMALIZATION   1.00000411
+
+ ATOM      ATOMIC                      COORDINATES (BOHR)
+           CHARGE         X                   Y                   Z
+ SI         14.0     8.8591299167       -1.8938077959        7.4374134671
+ SI         14.0     8.8591299167        2.4903753929        7.4374134671
+ SI         14.0     6.6669910792        0.2982743499        4.3372990870
+ SI         14.0    11.0512687543        0.2982743499        4.3372990870
+ H           1.0     8.8591299167       -4.1608742688        9.0404680225
+ H           1.0     8.8591299167        4.7574607631        9.0404680225
+ H           1.0     4.3999246063        0.2982743499        2.7342256344
+ H           1.0    13.3183352272        0.2982743499        2.7342256344
+ SI         14.0     0.0000000000       -2.1921010430        1.5500666387
+ SI         14.0     0.0000000000        2.1921010430        1.5500666387
+ SI         14.0    -2.1921388375        0.0000000000       -1.5500477414
+ SI         14.0     2.1921388375        0.0000000000       -1.5500477414
+ H           1.0     0.0000000000       -4.4591675160        3.1531211941
+ H           1.0     0.0000000000        4.4591675160        3.1531211941
+ H           1.0    -4.4592053105        0.0000000000       -3.1531211941
+ H           1.0     4.4592053105        0.0000000000       -3.1531211941
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 SI         2 SI         3 SI         4 SI         5 H
+
+   1 SI      0.0000000    2.3200100 *  2.3200307 *  2.3200307 *  1.4693009 *
+   2 SI      2.3200100 *  0.0000000    2.3200357 *  2.3200357 *  3.6204738
+   3 SI      2.3200307 *  2.3200357 *  0.0000000    2.3200600 *  3.6204882
+   4 SI      2.3200307 *  2.3200357 *  2.3200600 *  0.0000000    3.6204882
+   5 H       1.4693009 *  3.6204738    3.6204882    3.6204882    0.0000000
+   6 H       3.6204835    1.4693090 *  3.6205012    3.6205012    4.7193800
+   7 H       3.6205050    3.6205082    1.4693066 *  3.6205248    4.7193952
+   8 H       3.6205050    3.6205082    3.6205248    1.4693066 *  4.7193952
+   9 SI      5.6310530    6.1500920    4.0446386    6.1735092    6.2269203
+  10 SI      6.0298276    5.6310527    3.9530644    6.1139048    6.9993687
+  11 SI      7.6041778    7.6521843    5.6310527    7.6710200    8.3937995
+  12 SI      6.0058642    6.0665319    3.9164166    5.6310527    6.9787359
+  13 H       5.3815118    6.3751143    4.3792191    6.3977085    5.6310530
+  14 H       6.1983722    5.3106697    4.2056802    6.2801959    7.2450947
+  15 H       9.0599717    9.1003017    7.0994135    9.1161463    9.8058493
+  16 H       6.1508808    6.2101319    4.1353664    5.2825214    7.2045073
+
+                6 H          7 H          8 H          9 SI        10 SI
+
+   1 SI      3.6204835    3.6205050    3.6205050    5.6310530    6.0298276
+   2 SI      1.4693090 *  3.6205082    3.6205082    6.1500920    5.6310527
+   3 SI      3.6205012    1.4693066 *  3.6205248    4.0446386    3.9530644
+   4 SI      3.6205012    3.6205248    1.4693066 *  6.1735092    6.1139048
+   5 H       4.7193800    4.7193952    4.7193952    6.2269203    6.9993687
+   6 H       0.0000000    4.7194052    4.7194052    7.1563609    6.2874490
+   7 H       4.7194052    0.0000000    4.7194200    2.7478284 *  2.6111639 *
+   8 H       4.7194052    4.7194200    0.0000000    7.1972436    7.1461830
+   9 SI      7.1563609    2.7478284 *  7.1972436    0.0000000    2.3200200 *
+  10 SI      6.2874490    2.6111639 *  7.1461830    2.3200200 *  0.0000000
+  11 SI      8.4820857    4.1633595    8.5166105    2.3200357 *  2.3200357 *
+  12 SI      7.0846780    2.5553445 *  6.3111173    2.3200357 *  2.3200357 *
+  13 H       7.4479000    3.4363152    7.4871901    1.4693009 *  3.6204835
+  14 H       5.6310530    3.2122341    7.3870293    3.6204835    1.4693009 *
+  15 H       9.8815276    5.6310527    9.9111772    3.6205082    3.6205082
+  16 H       7.3071769    3.1196035    5.6310527    3.6205082    3.6205082
+
+               11 SI        12 SI        13 H         14 H         15 H
+
+   1 SI      7.6041778    6.0058642    5.3815118    6.1983722    9.0599717
+   2 SI      7.6521843    6.0665319    6.3751143    5.3106697    9.1003017
+   3 SI      5.6310527    3.9164166    4.3792191    4.2056802    7.0994135
+   4 SI      7.6710200    5.6310527    6.3977085    6.2801959    9.1161463
+   5 H       8.3937995    6.9787359    5.6310530    7.2450947    9.8058493
+   6 H       8.4820857    7.0846780    7.4479000    5.6310530    9.8815276
+   7 H       4.1633595    2.5553445 *  3.4363152    3.2122341    5.6310527
+   8 H       8.5166105    6.3111173    7.4871901    7.3870293    9.9111772
+   9 SI      2.3200357 *  2.3200357 *  1.4693009 *  3.6204835    3.6205082
+  10 SI      2.3200357 *  2.3200357 *  3.6204835    1.4693009 *  3.6205082
+  11 SI      0.0000000    2.3200600 *  3.6204947    3.6204947    1.4693066 *
+  12 SI      2.3200600 *  0.0000000    3.6204947    3.6204947    3.6205248
+  13 H       3.6204947    3.6204947    0.0000000    4.7193800    4.7194002
+  14 H       3.6204947    3.6204947    4.7193800    0.0000000    4.7194002
+  15 H       1.4693066 *  3.6205248    4.7194002    4.7194002    0.0000000
+  16 H       3.6205248    1.4693066 *  4.7194002    4.7194002    4.7194200
+
+               16 H
+
+   1 SI      6.1508808
+   2 SI      6.2101319
+   3 SI      4.1353664
+   4 SI      5.2825214
+   5 H       7.2045073
+   6 H       7.3071769
+   7 H       3.1196035
+   8 H       5.6310527
+   9 SI      3.6205082
+  10 SI      3.6205082
+  11 SI      3.6205248
+  12 SI      1.4693066 *
+  13 H       4.7194002
+  14 H       4.7194002
+  15 H       4.7194200
+  16 H       0.0000000
+
+  * ... LESS THAN  3.000
+
+
+     ATOMIC BASIS SET
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ SI
+
+      1   S       1         16115.9000000    0.001959480216
+      1   S       2          2425.5800000    0.014928801642
+      1   S       3           553.8670000    0.072847808013
+      1   S       4           156.3400000    0.246130027074
+      1   S       5            50.0683000    0.485914053451
+      1   S       6            17.0178000    0.325002035750
+
+      2   L       7           292.7180000   -0.002780941415    0.004438264521
+      2   L       8            69.8731000   -0.035714618169    0.032667933275
+      2   L       9            22.3363000   -0.114985058496    0.134721137226
+      2   L      10             8.1503900    0.093563447599    0.328678334790
+      2   L      11             3.1345800    0.603017306773    0.449640458002
+      2   L      12             1.2254300    0.418959213137    0.261372266233
+
+      3   L      13             1.7273800   -0.244631004249   -0.017795106055
+      3   L      14             0.5729220    0.004315737717    0.253539086269
+      3   L      15             0.2221920    1.098184508219    0.800669272434
+
+      4   L      16             0.0778369    1.000000000000    1.000000000000
+
+      5   D      17             1.8000000    1.000000000000
+
+      6   D      18             0.4500000    1.000000000000
+
+      7   D      19             0.1125000    1.000000000000
+
+      8   F      20             0.3200000    1.000000000000
+
+ SI
+
+      9   S      21         16115.9000000    0.001959480216
+      9   S      22          2425.5800000    0.014928801642
+      9   S      23           553.8670000    0.072847808013
+      9   S      24           156.3400000    0.246130027074
+      9   S      25            50.0683000    0.485914053451
+      9   S      26            17.0178000    0.325002035750
+
+     10   L      27           292.7180000   -0.002780941415    0.004438264521
+     10   L      28            69.8731000   -0.035714618169    0.032667933275
+     10   L      29            22.3363000   -0.114985058496    0.134721137226
+     10   L      30             8.1503900    0.093563447599    0.328678334790
+     10   L      31             3.1345800    0.603017306773    0.449640458002
+     10   L      32             1.2254300    0.418959213137    0.261372266233
+
+     11   L      33             1.7273800   -0.244631004249   -0.017795106055
+     11   L      34             0.5729220    0.004315737717    0.253539086269
+     11   L      35             0.2221920    1.098184508219    0.800669272434
+
+     12   L      36             0.0778369    1.000000000000    1.000000000000
+
+     13   D      37             1.8000000    1.000000000000
+
+     14   D      38             0.4500000    1.000000000000
+
+     15   D      39             0.1125000    1.000000000000
+
+     16   F      40             0.3200000    1.000000000000
+
+ SI
+
+     17   S      41         16115.9000000    0.001959480216
+     17   S      42          2425.5800000    0.014928801642
+     17   S      43           553.8670000    0.072847808013
+     17   S      44           156.3400000    0.246130027074
+     17   S      45            50.0683000    0.485914053451
+     17   S      46            17.0178000    0.325002035750
+
+     18   L      47           292.7180000   -0.002780941415    0.004438264521
+     18   L      48            69.8731000   -0.035714618169    0.032667933275
+     18   L      49            22.3363000   -0.114985058496    0.134721137226
+     18   L      50             8.1503900    0.093563447599    0.328678334790
+     18   L      51             3.1345800    0.603017306773    0.449640458002
+     18   L      52             1.2254300    0.418959213137    0.261372266233
+
+     19   L      53             1.7273800   -0.244631004249   -0.017795106055
+     19   L      54             0.5729220    0.004315737717    0.253539086269
+     19   L      55             0.2221920    1.098184508219    0.800669272434
+
+     20   L      56             0.0778369    1.000000000000    1.000000000000
+
+     21   D      57             1.8000000    1.000000000000
+
+     22   D      58             0.4500000    1.000000000000
+
+     23   D      59             0.1125000    1.000000000000
+
+     24   F      60             0.3200000    1.000000000000
+
+ SI
+
+     25   S      61         16115.9000000    0.001959480216
+     25   S      62          2425.5800000    0.014928801642
+     25   S      63           553.8670000    0.072847808013
+     25   S      64           156.3400000    0.246130027074
+     25   S      65            50.0683000    0.485914053451
+     25   S      66            17.0178000    0.325002035750
+
+     26   L      67           292.7180000   -0.002780941415    0.004438264521
+     26   L      68            69.8731000   -0.035714618169    0.032667933275
+     26   L      69            22.3363000   -0.114985058496    0.134721137226
+     26   L      70             8.1503900    0.093563447599    0.328678334790
+     26   L      71             3.1345800    0.603017306773    0.449640458002
+     26   L      72             1.2254300    0.418959213137    0.261372266233
+
+     27   L      73             1.7273800   -0.244631004249   -0.017795106055
+     27   L      74             0.5729220    0.004315737717    0.253539086269
+     27   L      75             0.2221920    1.098184508219    0.800669272434
+
+     28   L      76             0.0778369    1.000000000000    1.000000000000
+
+     29   D      77             1.8000000    1.000000000000
+
+     30   D      78             0.4500000    1.000000000000
+
+     31   D      79             0.1125000    1.000000000000
+
+     32   F      80             0.3200000    1.000000000000
+
+ H
+
+     33   S      81            18.7311370    0.033494599523
+     33   S      82             2.8253937    0.234726946658
+     33   S      83             0.6401217    0.813757318413
+
+     34   S      84             0.1612778    1.000000000000
+
+     35   P      85             3.0000000    1.000000000000
+
+     36   P      86             0.7500000    1.000000000000
+
+     37   P      87             0.1875000    1.000000000000
+
+     38   D      88             1.0000000    1.000000000000
+
+ H
+
+     39   S      89            18.7311370    0.033494599523
+     39   S      90             2.8253937    0.234726946658
+     39   S      91             0.6401217    0.813757318413
+
+     40   S      92             0.1612778    1.000000000000
+
+     41   P      93             3.0000000    1.000000000000
+
+     42   P      94             0.7500000    1.000000000000
+
+     43   P      95             0.1875000    1.000000000000
+
+     44   D      96             1.0000000    1.000000000000
+
+ H
+
+     45   S      97            18.7311370    0.033494599523
+     45   S      98             2.8253937    0.234726946658
+     45   S      99             0.6401217    0.813757318413
+
+     46   S     100             0.1612778    1.000000000000
+
+     47   P     101             3.0000000    1.000000000000
+
+     48   P     102             0.7500000    1.000000000000
+
+     49   P     103             0.1875000    1.000000000000
+
+     50   D     104             1.0000000    1.000000000000
+
+ H
+
+     51   S     105            18.7311370    0.033494599523
+     51   S     106             2.8253937    0.234726946658
+     51   S     107             0.6401217    0.813757318413
+
+     52   S     108             0.1612778    1.000000000000
+
+     53   P     109             3.0000000    1.000000000000
+
+     54   P     110             0.7500000    1.000000000000
+
+     55   P     111             0.1875000    1.000000000000
+
+     56   D     112             1.0000000    1.000000000000
+
+ SI
+
+     57   S     113         16115.9000000    0.001959480216
+     57   S     114          2425.5800000    0.014928801642
+     57   S     115           553.8670000    0.072847808013
+     57   S     116           156.3400000    0.246130027074
+     57   S     117            50.0683000    0.485914053451
+     57   S     118            17.0178000    0.325002035750
+
+     58   L     119           292.7180000   -0.002780941415    0.004438264521
+     58   L     120            69.8731000   -0.035714618169    0.032667933275
+     58   L     121            22.3363000   -0.114985058496    0.134721137226
+     58   L     122             8.1503900    0.093563447599    0.328678334790
+     58   L     123             3.1345800    0.603017306773    0.449640458002
+     58   L     124             1.2254300    0.418959213137    0.261372266233
+
+     59   L     125             1.7273800   -0.244631004249   -0.017795106055
+     59   L     126             0.5729220    0.004315737717    0.253539086269
+     59   L     127             0.2221920    1.098184508219    0.800669272434
+
+     60   L     128             0.0778369    1.000000000000    1.000000000000
+
+     61   D     129             1.8000000    1.000000000000
+
+     62   D     130             0.4500000    1.000000000000
+
+     63   D     131             0.1125000    1.000000000000
+
+     64   F     132             0.3200000    1.000000000000
+
+ SI
+
+     65   S     133         16115.9000000    0.001959480216
+     65   S     134          2425.5800000    0.014928801642
+     65   S     135           553.8670000    0.072847808013
+     65   S     136           156.3400000    0.246130027074
+     65   S     137            50.0683000    0.485914053451
+     65   S     138            17.0178000    0.325002035750
+
+     66   L     139           292.7180000   -0.002780941415    0.004438264521
+     66   L     140            69.8731000   -0.035714618169    0.032667933275
+     66   L     141            22.3363000   -0.114985058496    0.134721137226
+     66   L     142             8.1503900    0.093563447599    0.328678334790
+     66   L     143             3.1345800    0.603017306773    0.449640458002
+     66   L     144             1.2254300    0.418959213137    0.261372266233
+
+     67   L     145             1.7273800   -0.244631004249   -0.017795106055
+     67   L     146             0.5729220    0.004315737717    0.253539086269
+     67   L     147             0.2221920    1.098184508219    0.800669272434
+
+     68   L     148             0.0778369    1.000000000000    1.000000000000
+
+     69   D     149             1.8000000    1.000000000000
+
+     70   D     150             0.4500000    1.000000000000
+
+     71   D     151             0.1125000    1.000000000000
+
+     72   F     152             0.3200000    1.000000000000
+
+ SI
+
+     73   S     153         16115.9000000    0.001959480216
+     73   S     154          2425.5800000    0.014928801642
+     73   S     155           553.8670000    0.072847808013
+     73   S     156           156.3400000    0.246130027074
+     73   S     157            50.0683000    0.485914053451
+     73   S     158            17.0178000    0.325002035750
+
+     74   L     159           292.7180000   -0.002780941415    0.004438264521
+     74   L     160            69.8731000   -0.035714618169    0.032667933275
+     74   L     161            22.3363000   -0.114985058496    0.134721137226
+     74   L     162             8.1503900    0.093563447599    0.328678334790
+     74   L     163             3.1345800    0.603017306773    0.449640458002
+     74   L     164             1.2254300    0.418959213137    0.261372266233
+
+     75   L     165             1.7273800   -0.244631004249   -0.017795106055
+     75   L     166             0.5729220    0.004315737717    0.253539086269
+     75   L     167             0.2221920    1.098184508219    0.800669272434
+
+     76   L     168             0.0778369    1.000000000000    1.000000000000
+
+     77   D     169             1.8000000    1.000000000000
+
+     78   D     170             0.4500000    1.000000000000
+
+     79   D     171             0.1125000    1.000000000000
+
+     80   F     172             0.3200000    1.000000000000
+
+ SI
+
+     81   S     173         16115.9000000    0.001959480216
+     81   S     174          2425.5800000    0.014928801642
+     81   S     175           553.8670000    0.072847808013
+     81   S     176           156.3400000    0.246130027074
+     81   S     177            50.0683000    0.485914053451
+     81   S     178            17.0178000    0.325002035750
+
+     82   L     179           292.7180000   -0.002780941415    0.004438264521
+     82   L     180            69.8731000   -0.035714618169    0.032667933275
+     82   L     181            22.3363000   -0.114985058496    0.134721137226
+     82   L     182             8.1503900    0.093563447599    0.328678334790
+     82   L     183             3.1345800    0.603017306773    0.449640458002
+     82   L     184             1.2254300    0.418959213137    0.261372266233
+
+     83   L     185             1.7273800   -0.244631004249   -0.017795106055
+     83   L     186             0.5729220    0.004315737717    0.253539086269
+     83   L     187             0.2221920    1.098184508219    0.800669272434
+
+     84   L     188             0.0778369    1.000000000000    1.000000000000
+
+     85   D     189             1.8000000    1.000000000000
+
+     86   D     190             0.4500000    1.000000000000
+
+     87   D     191             0.1125000    1.000000000000
+
+     88   F     192             0.3200000    1.000000000000
+
+ H
+
+     89   S     193            18.7311370    0.033494599523
+     89   S     194             2.8253937    0.234726946658
+     89   S     195             0.6401217    0.813757318413
+
+     90   S     196             0.1612778    1.000000000000
+
+     91   P     197             3.0000000    1.000000000000
+
+     92   P     198             0.7500000    1.000000000000
+
+     93   P     199             0.1875000    1.000000000000
+
+     94   D     200             1.0000000    1.000000000000
+
+ H
+
+     95   S     201            18.7311370    0.033494599523
+     95   S     202             2.8253937    0.234726946658
+     95   S     203             0.6401217    0.813757318413
+
+     96   S     204             0.1612778    1.000000000000
+
+     97   P     205             3.0000000    1.000000000000
+
+     98   P     206             0.7500000    1.000000000000
+
+     99   P     207             0.1875000    1.000000000000
+
+    100   D     208             1.0000000    1.000000000000
+
+ H
+
+    101   S     209            18.7311370    0.033494599523
+    101   S     210             2.8253937    0.234726946658
+    101   S     211             0.6401217    0.813757318413
+
+    102   S     212             0.1612778    1.000000000000
+
+    103   P     213             3.0000000    1.000000000000
+
+    104   P     214             0.7500000    1.000000000000
+
+    105   P     215             0.1875000    1.000000000000
+
+    106   D     216             1.0000000    1.000000000000
+
+ H
+
+    107   S     217            18.7311370    0.033494599523
+    107   S     218             2.8253937    0.234726946658
+    107   S     219             0.6401217    0.813757318413
+
+    108   S     220             0.1612778    1.000000000000
+
+    109   P     221             3.0000000    1.000000000000
+
+    110   P     222             0.7500000    1.000000000000
+
+    111   P     223             0.1875000    1.000000000000
+
+    112   D     224             1.0000000    1.000000000000
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =  112
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =  464
+ NOTE: THIS RUN WILL RESTRICT THE MO VARIATION SPACE TO SPHERICAL HARMONICS.
+ THE NUMBER OF ORBITALS KEPT IN THE VARIATIONAL SPACE WILL BE PRINTED LATER.
+ NUMBER OF ELECTRONS                          =  120
+ CHARGE OF MOLECULE                           =    0
+ SPIN MULTIPLICITY                            =    1
+ NUMBER OF OCCUPIED ORBITALS (ALPHA)          =   60
+ NUMBER OF OCCUPIED ORBITALS (BETA )          =   60
+ TOTAL NUMBER OF ATOMS                        =   16
+ THE NUCLEAR REPULSION ENERGY IS      966.3168596286
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=ENERGY       EXETYP=RUN
+ MPLEVL=       0     CITYP =NONE         CCTYP =NONE         VBTYP =NONE
+ DFTTYP=NONE         TDDFT =NONE
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=       1     NOSYM =       1     MAXIT =       1     UNITS =ANGS
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=
+ NPRINT=      -5     IREST =       0     GEOM  =INPUT
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=   100000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=         100 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS   100000000 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=   200000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0  mem22=         0
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1   464     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTTRF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       T     AOINTS =DUP
+
+          --------------
+          OPENMP OPTIONS
+          --------------
+ INTOMP  =       1
+ SHFOCK  =       F
+
+ WARNING! YOU HAVE SELECTED AN OPENMP CODE, BUT ONLY ONE THREAD IS AVAILABLE
+ MAYBE YOU FOGOT TO SET OMP_NUM_THREADS ENVIRONMENT VARIABLE?
+
+ THREADED 2-ELECTRON INTEGRAL CODE WILL BE USED
+ NUMBER OF OPENMP THREADS:     1
+
+ 2E INTS ALGORITHM: MPI(I)  + OPENMP(JK)
+ PRIVATE FOCK MATRIX CODE WILL BE USED
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       T
+
+     ------------------------------------------
+     THE POINT GROUP IS C1 , NAXIS= 1, ORDER= 1
+     ------------------------------------------
+
+ -- VARIATIONAL SPACE WILL BE RESTRICTED TO PURE SPHERICAL HARMONICS ONLY --
+ AFTER EXCLUDING CONTAMINANT COMBINATIONS FROM THE CARTESIAN GAUSSIAN BASIS
+ SET, THE NUMBER OF SPHERICAL HARMONICS KEPT IN THE VARIATION SPACE IS  408
+
+     DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ A   =  408
+
+ ..... DONE SETTING UP THE RUN .....
+ STEP CPU TIME =     0.08 TOTAL CPU TIME =          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.1 SECONDS, CPU UTILIZATION IS   100.00%
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ STEP CPU TIME =     0.15 TOTAL CPU TIME =          0.2 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.2 SECONDS, CPU UTILIZATION IS   100.00%
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES   1580976 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    60 ORBITALS ARE OCCUPIED (   40 CORE ORBITALS).
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A
+    69=A       70=A
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ STEP CPU TIME =     0.38 TOTAL CPU TIME =          0.6 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.6 SECONDS, CPU UTILIZATION IS   100.00%
+
+                    ----------------------
+                    AO INTEGRAL TECHNOLOGY
+                    ----------------------
+     S,P,L SHELL ROTATED AXIS INTEGRALS, REPROGRAMMED BY
+        KAZUYA ISHIMURA (IMS) AND JOSE SIERRA (SYNSTAR).
+     S,P,D,L SHELL ROTATED AXIS INTEGRALS PROGRAMMED BY
+        KAZUYA ISHIMURA (INSTITUTE FOR MOLECULAR SCIENCE).
+     S,P,D,F,G SHELL TO TOTAL QUARTET ANGULAR MOMENTUM SUM 5,
+        ERIC PROGRAM BY GRAHAM FLETCHER (ELORET AND NASA ADVANCED
+        SUPERCOMPUTING DIVISION, AMES RESEARCH CENTER).
+     S,P,D,F,G,L SHELL GENERAL RYS QUADRATURE PROGRAMMED BY
+        MICHEL DUPUIS (PACIFIC NORTHWEST NATIONAL LABORATORY).
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.02 TOTAL CPU TIME =          0.6 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.6 SECONDS, CPU UTILIZATION IS   100.00%
+
+          --------------------------
+                 RHF SCF CALCULATION
+          --------------------------
+     DENSITY MATRIX CONV=  2.00E-05
+
+ DIRECT SCF CALCULATION, SCHWRZ=T   FDIFF=T,  DIRTHR=  0.00E+00 NITDIR=10
+ ------------------------------------
+ ------------------------------------
+ ------------------------------------
+ CALL MDI ONCE TO START THE ENGINE
+ ------------------------------------
+ ------------------------------------
+ ------------------------------------
+ Engine name: libERI
+
+                                                                                   NONZERO     BLOCKS
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE     ORB. GRAD      INTEGRALS    SKIPPED
+ ------------------------------------
+ ------------------------------------
+ ------------------------------------
+ START OF MDI
+ ------------------------------------
+ ------------------------------------
+ ------------------------------------
+   1  0  0    -2314.2477916798 -2314.2477916798   1.693804146   0.000000000              0          0
+
+ SCF IS UNCONVERGED, TOO MANY ITERATIONS
+     TIME TO FORM FOCK OPERATORS=       3.2 SECONDS (       3.2 SEC/ITER)
+     FOCK TIME ON FIRST ITERATION=       3.2, LAST ITERATION=       3.2
+     TIME TO SOLVE SCF EQUATIONS=       0.1 SECONDS (       0.1 SEC/ITER)
+
+ FINAL RHF ENERGY IS        0.0000000000 AFTER   1 ITERATIONS
+ ...... END OF RHF CALCULATION ......
+ STEP CPU TIME =     4.08 TOTAL CPU TIME =          4.7 (      0.1 MIN)
+ TOTAL WALL CLOCK TIME=          4.7 SECONDS, CPU UTILIZATION IS   100.00%
+                  1665068  WORDS OF DYNAMIC MEMORY USED
+ EXECUTION OF GAMESS TERMINATED NORMALLY 10:14:59 19-DEC-2024
+
+          This is a threaded run. In some cases not all
+          threaded components in GAMESS will saturate the
+          total number of available threads on your system or
+          set by OMP_NUM_THREADS
+
+
+ about to close the shop
+ DDI: 263640 bytes (0.3 MB / 0 MWords) used by master data server.
+
+ about to close the shop
+
+ ----------------------------------------
+ CPU timing information for all processes
+ ========================================
+ 0: 3.456 + 0.380 = 3.837
+ 1: 2.977 + 1.790 = 4.768
+ ----------------------------------------
+else
+else
+unset echo
+----- accounting info -----
+Files used on the parent node Big-Chungus were:
+-rw-r--r-- 1 delangel delangel    13311 Dec 19 10:14 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F05
+-rw-rw-r-- 1 delangel delangel 15018480 Dec 19 10:14 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F10
+-rw-rw-r-- 1 delangel delangel   130880 Dec 19 10:14 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F26R
+-rw-rw-r-- 1 delangel delangel        0 Dec 19 10:14 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.F27R
+-rw-rw-r-- 1 delangel delangel       12 Dec 19 10:14 /home/delangel/2eInts/gamess_MDI/scratch/Si_thn_2_631G3df3pd.nodes.mpd
+Thu Dec 19 10:14:59 CST 2024
+13.8u 5.6s 0:15.71 123.9% 0+0k 0+16424io 2552pf+0w

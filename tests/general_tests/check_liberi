@@ -1,0 +1,75 @@
+#!/bin/csh
+#
+# Script to check the results from libERI by comparing them to
+# pre-stored GAMESS CPU values.
+#
+# This is, in a sense, the driver for the scripts that actually
+# check each test
+#
+# 1. We need to have the testing_scripts/ folder in here
+#
+set SCRIPTSPATH=./testing_scripts
+if (! -e ./testing_scripts) then
+    echo "This script requires the testing_scripts subfolder present."
+    echo "If you moved things around, you have to go into the script"
+    echo "and change the SCRIPTSPATH variable."
+    exit
+endif
+#
+# 2. We assume that the .log files are in the same folder
+# as this script
+#
+set LOGPATH=.
+#
+# 3. The number of tests to run and other useful variables
+#
+set ntests=6
+set log=log
+set exam=$LOGPATH/exam
+set script=$SCRIPTSPATH/exam
+setenv check_tol $SCRIPTSPATH/tolerance_test
+#
+# 4. Be healthy and communicate what we are trying to do
+#
+echo "Comparing the results of the tests with the results from GAMESS."
+echo "The output (examXX.log) files will be taken from $LOGPATH."
+#
+# 5. Check that at least the first log file is there
+#
+if (! -e $exam"01."$log) then
+    echo "Could not find the log files. This script assumes."
+    echo "That you have the log files for all the tests in the suite."
+    echo "If you want to run tests individually, you will have to 'manually'"
+    echo "execute the correspinding examXX script in $SCRIPTSPATH"
+    exit
+endif
+#
+# 6. Execute the testing scripts
+#
+set i=1
+set nfailed=0
+
+while ($i <= $ntests)
+    set ii=`echo $i | awk '{ printf "%02d",$1 }'`
+    echo -n "exam${ii}: "
+    if(-e $exam$ii.$log) then
+        $script$ii $exam$ii.$log | awk '{ printf "%-63s",$0 }'
+        if($status != 0 ) then
+            @ nfailed++
+            echo "\!\!FAILED."
+        else
+            echo Passed.
+        endif
+    else
+        @ nfailed++
+        echo -n not found. | awk '{ printf "%-63s",$0 }'
+        echo "\!\!FAILED."
+    endif
+    @ i++
+end
+
+if($nfailed != 0) then
+   echo $nfailed 'job(s) got incorrect numerical results. Please examine why.'
+else
+   echo All $ntests test results are correct'\!'
+endif

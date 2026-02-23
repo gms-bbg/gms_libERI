@@ -1,0 +1,39 @@
+# src/rhf/rys/CMakeLists.txt — Rys quadrature integral kernels
+
+target_sources(
+  ${main_lib}
+  PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/rys_kernels.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3000_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3010_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3011_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3020_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3021_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3022_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3030_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3100_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3110_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3111_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3120_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3121_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3122_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3130_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3131_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3200_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3210_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3211_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3220_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3221_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3222_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3230_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3231_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3232_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3300_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3310_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3311_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3320_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3321_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3322_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3330_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3331_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3332_rysgen.F90
+          ${CMAKE_CURRENT_SOURCE_DIR}/int3333_rysgen.F90)

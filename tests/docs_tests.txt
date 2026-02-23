@@ -1,0 +1,13 @@
+Some exams are taken from gamess test suite
+1) CH2 RHF geometry optimization (exam01)
+2) H2O RHF + gradient (exam07)
+3) HCN RHF IRC (exam11)
+4) HNO coupled cluster test (exam32)
+5) (H2O)3 FMO RHF (exam37)
+6) w2-ccd
+7) w2-6-31g(d)
+8) w64-ccd
+9) w64-6-316(d)
+10) w128-ccd
+11) w128-6-31G(d)
+12) omp-exam02 - RHF pyrazine ccd molecules
