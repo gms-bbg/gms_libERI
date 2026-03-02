@@ -224,7 +224,7 @@ mpirun -np 1 ./bench_c60
 - **Melisa Alkan** (NVIDIA) — Original idea and implementation, developed through a [MolSSI](https://molssi.org/) fellowship
 - **Taylor Barnes** (MolSSI) — MDI integration and plugin architecture
 - **Jeff Hammond** (NVIDIA) — Technical guidance and support
-- **Daniel del Angel** (Iowa State University) — F-function integrals (PhD project)
+- **Daniel Del Angel** (Iowa State University) — F-function integrals (PhD project)
 - **Jorge Galvez** (Australian National University) — Software engineering and HPC consulting
 
 With heavy relation and sponsorship through the GAMESS-ECP project under Professor Mark S. Gordon 
