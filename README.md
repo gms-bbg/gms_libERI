@@ -4,7 +4,7 @@ GPU-accelerated two-electron repulsion integral (ERI) library for quantum chemis
 
 ## Overview
 
-In Hartree-Fock and DFT calculations the two-electron integral step is the bottleneck. libERI replaces this step by computing all required shell-quartet classes entirely on the GPU. It provides a handle-based Fortran API with zero global state, and can integrate with GAMESS either through direct linking or as an [MDI](https://molssi-mdi.github.io/MDI_Library/html/index.html) engine plugin.
+In Hartree-Fock and DFT calculations the two-electron integral step is the bottleneck. libERI replaces this step by computing all required shell-quartet classes entirely on the GPU. It provides a handle-based Fortran API with zero global state, and can integrate with GAMESS either through direct linking or as an [MDI]([https://molssi-mdi.github.io/MDI_Library/html/index.html](https://github.com/MolSSI-MDI/MDI_Library/tree/master)) engine plugin.
 
 ### Supported integral classes
 
@@ -175,14 +175,14 @@ call liberi_finalize()      ! After convergence
 
 Build libERI as a static library (`-DERI_ENABLE_MDI=OFF`) and link with GAMESS. The GAMESS link step **must** include `-mp=gpu -gpu=<arch> -gpu=mem:separate`.
 
-### As an MDI plugin (legacy)
+### As an MDI plugin
 
-When built with `-DERI_ENABLE_MDI=ON`, libERI can run as an MDI engine plugin, loaded by GAMESS at runtime. The MDI API uses a local `mdi_state_t` (no globals) and calls the same handle API internally.
+When built with `-DERI_ENABLE_MDI=ON`, libERI can run as an MDI engine plugin, loaded by GAMESS at runtime. The MDI API uses a local `mdi_state_t` and calls the same handle API internally.
 
 **Inputs received from driver (GAMESS):**
 - Basis set info: atom coordinates, shell angular momenta, exponents, contraction coefficients
 - Schwarz screening integrals
-- AO density matrix (and beta density for UHF)
+- AO density matrix
 
 **Outputs sent to driver:**
 - Fock matrix
@@ -206,18 +206,6 @@ mpirun -np 1 ./test_h2_sonly --generate
 
 Tests use the handle API with local arrays (no globals, no MDI, no GAMESS) and validate Fock matrix results against hardcoded reference values for small molecules (H2, H2O) with various basis sets.
 
-### MDI plugin tests
-
-```bash
-cd tests
-pytest test_plugin.py
-```
-
-Requires MDI support (`-DERI_ENABLE_MDI=ON`).
-
-### GAMESS integration tests
-
-The `tests/general_tests/` directory contains six exam inputs (water clusters, various basis sets) that validate first-iteration Fock matrix energies against reference GAMESS CPU values. These require a working GAMESS installation.
 
 ## Benchmarks
 
@@ -235,9 +223,9 @@ mpirun -np 1 ./bench_c60
 
 - **Melisa Alkan** (NVIDIA) — Original idea and implementation, developed through a [MolSSI](https://molssi.org/) fellowship
 - **Taylor Barnes** (MolSSI) — MDI integration and plugin architecture
-- **Jeff Hammond** (NVIDIA) — Technical guidance
+- **Jeff Hammond** (NVIDIA) — Technical guidance and support
 - **Daniel del Angel** (Iowa State University) — F-function integrals (PhD project)
-- **Jorge Galvez** (Australian National University) — Software engineering and HPC
+- **Jorge Galvez** (Australian National University) — Software engineering and HPC consulting
 
 With heavy relation and sponsorship through the GAMESS-ECP project under Professor Mark S. Gordon 
 at Iowa State University / Ames Laboratory.
