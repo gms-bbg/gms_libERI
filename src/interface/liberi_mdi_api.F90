@@ -100,35 +100,44 @@ module mdi_api
     real(dp), allocatable :: fb_final(:)
   end type mdi_state_t
 
+  ! Persistent state across plugin launches (GAMESS launches the plugin
+  ! multiple times: once for setup, then once per SCF iteration for Fock builds).
+  ! The library stays loaded (RTLD_NODELETE), so module-level state survives.
+  type(mdi_state_t), save, target :: persistent_state
+  logical, save :: state_initialized = .false.
+
 contains
 #ifdef USE_MDI
   function MDI_Plugin_init_ERI(plugin_state) bind(C, name="MDI_Plugin_init_ERI")
     TYPE(C_PTR), VALUE :: plugin_state
     integer :: MDI_Plugin_init_ERI
     integer :: ierr
-    type(mdi_state_t), target :: state
 
     CALL MDI_Set_plugin_state(plugin_state, ierr)
 
-    call liberi_create(state%handle)
+    if (.not. state_initialized) then
+      call liberi_create(persistent_state%handle)
+      state_initialized = .true.
+    end if
 
     ! Get the MPI intra-communicator over which this plugin will run
-    CALL MDI_MPI_get_world_comm(state%world_comm, ierr)
-    call MPI_Comm_rank(state%world_comm, state%n_rank, ierr)
-    call MPI_COMM_SIZE(state%world_comm, state%n_size, ierr)
+    CALL MDI_MPI_get_world_comm(persistent_state%world_comm, ierr)
+    call MPI_Comm_rank(persistent_state%world_comm, persistent_state%n_rank, ierr)
+    call MPI_COMM_SIZE(persistent_state%world_comm, persistent_state%n_size, ierr)
 
     ! Perform one-time operations required to establish a connection with the driver
-    CALL initialize_mdi(state)
+    CALL initialize_mdi(persistent_state)
+
+    ! Reset terminate flag for this launch
+    persistent_state%terminate_flag = .false.
 
     ! Respond to commands from the driver
-    CALL respond_to_commands(state)
+    CALL respond_to_commands(persistent_state)
 
-    if (allocated(state%density)) deallocate (state%density)
-    if (allocated(state%fa)) deallocate (state%fa)
-    if (allocated(state%density_b)) deallocate (state%density_b)
-    if (allocated(state%fb)) deallocate (state%fb)
-
-    call liberi_destroy(state%handle)
+    if (allocated(persistent_state%density)) deallocate (persistent_state%density)
+    if (allocated(persistent_state%fa)) deallocate (persistent_state%fa)
+    if (allocated(persistent_state%density_b)) deallocate (persistent_state%density_b)
+    if (allocated(persistent_state%fb)) deallocate (persistent_state%fb)
 
     MDI_Plugin_init_ERI = 0
   END function MDI_Plugin_init_ERI
@@ -137,23 +146,25 @@ contains
     TYPE(C_PTR), VALUE :: plugin_state
     integer :: MDI_Plugin_open_ERI
     integer :: ierr
-    type(mdi_state_t), target :: state
 
     CALL MDI_Set_plugin_state(plugin_state, ierr)
 
-    call liberi_create(state%handle)
+    if (.not. state_initialized) then
+      call liberi_create(persistent_state%handle)
+      state_initialized = .true.
+    end if
 
     ! Get the MPI intra-communicator over which this plugin will run
-    CALL MDI_MPI_get_world_comm(state%world_comm, ierr)
-    call MPI_Comm_rank(state%world_comm, state%n_rank, ierr)
-    call MPI_COMM_SIZE(state%world_comm, state%n_size, ierr)
+    CALL MDI_MPI_get_world_comm(persistent_state%world_comm, ierr)
+    call MPI_Comm_rank(persistent_state%world_comm, persistent_state%n_rank, ierr)
+    call MPI_COMM_SIZE(persistent_state%world_comm, persistent_state%n_size, ierr)
 
     ! Perform one-time operations required to establish a connection with the driver
-    CALL initialize_mdi(state)
+    CALL initialize_mdi(persistent_state)
 
-    CALL respond_to_commands(state)
+    persistent_state%terminate_flag = .false.
 
-    call liberi_destroy(state%handle)
+    CALL respond_to_commands(persistent_state)
 
     MDI_Plugin_open_ERI = 0
   END function MDI_Plugin_open_ERI
@@ -245,7 +256,7 @@ contains
 
     character(LEN=*), intent(IN)  :: command
     integer, intent(IN)           :: comm
-    TYPE(C_PTR)                   :: obj_ptr
+    TYPE(C_PTR), VALUE            :: obj_ptr
     integer                       :: execute_command_wrapper
 
     integer                       :: ierr
@@ -270,6 +281,8 @@ contains
 
     CASE ("EXIT_CONVERGED")
       call liberi_cleanup(state%handle)
+      call liberi_destroy(state%handle)
+      state_initialized = .false.
       state%terminate_flag = .true.
 
     CASE (">TYPSCF")
