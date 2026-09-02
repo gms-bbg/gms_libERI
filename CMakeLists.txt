@@ -10,7 +10,7 @@ project(
 # Options
 # =============================================================================
 set(ERI_GPU_ARCH
-    "cc70"
+    "cc80"
     CACHE STRING "NVIDIA GPU compute capability (e.g. cc70, cc80)")
 option(ERI_ENABLE_F "Enable F-function integrals (eric + rys)" OFF)
 option(ERI_USE_MPI "MPI support in MDI" ON)
@@ -72,21 +72,28 @@ add_subdirectory(src)
 
 # =============================================================================
 # Compile definitions — maps options to preprocessor guards
+#
+# These are PRIVATE on purpose: they guard our own sources in src/ and nothing
+# else, and Fortran consumers link against already-compiled .mod files, so no
+# downstream target needs them. Exporting them is actively harmful, because the
+# names are generic enough to collide with a consumer's own identifiers -- as
+# PUBLIC, USE_MDI reached every GAMESS source file and cpp rewrote the Fortran
+# module variable of the same name in source/modmdi.src to "1".
 # =============================================================================
 
 # F-functions
 if(ERI_ENABLE_F)
-  target_compile_definitions(${main_lib} PUBLIC ENABLE_F)
+  target_compile_definitions(${main_lib} PRIVATE ENABLE_F)
 endif()
 
 # GPU offloading (OpenMP target)
 if(ERI_ENABLE_GPU)
-  target_compile_definitions(${main_lib} PUBLIC ENABLE_GPU)
+  target_compile_definitions(${main_lib} PRIVATE ENABLE_GPU)
 endif()
 
 # MDI support
 if(ERI_ENABLE_MDI)
-  target_compile_definitions(${main_lib} PUBLIC USE_MDI)
+  target_compile_definitions(${main_lib} PRIVATE USE_MDI)
 endif()
 
 # =============================================================================
