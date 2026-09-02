@@ -2,7 +2,7 @@
 
 set(_lib "mdi")
 set(_url "https://github.com/MolSSI-MDI/MDI_Library.git")
-set(_rev "v1.4.35")
+set(_rev "v1.4.21")
 
 # MDI is a static lib linked into our shared lib — it must be built with -fPIC
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
